@@ -1,0 +1,144 @@
+.containerMain {
+background-color: #dfdbdb;
+}
+
+.containerNav {
+    display: grid;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    
+    grid-template-columns: auto 750px auto 520px auto;
+    grid-template-rows: 40px 40px;
+
+    overflow: hidden;
+    
+    grid-template-areas: 
+    ". navLeft navMiddle navRight ."
+    ". . . . ."
+    ;
+    
+    
+}
+
+.containerContent {
+    display: grid;
+    
+    grid-template-columns: minmax(10px, 100px) 750px auto auto minmax(10px, 100px);
+    grid-template-rows: repeat(5, auto);
+    
+
+    overflow: hidden;
+    text-overflow: unset;
+    grid-template-areas: 
+    ". contentLeft contentMiddle contentRight ."
+    ". . . . ."
+    ;
+}
+
+/* 
+#welcome_left {
+    float: left;
+    display: inline;
+    width: 570px;
+    padding: 0 20px 0 20px;
+    margin-top: 20px;
+    border-right: 1px solid #bbb;
+} */
+
+
+/**************************************************
+* Bilde styling
+*
+**************************************************/
+img.icon{
+    float: left;
+    margin-top: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/**************************************************
+* Navigation Bar områder
+*
+**************************************************/
+    
+.navLeftSide {
+    grid-area: navLeft;
+    
+}
+.navMiddleSide {
+    grid-area: navMiddle;
+    /* background-color: #333; */
+}
+.navRightSide {
+    grid-area: navRight;
+}
+
+/**************************************************
+* Navigation Bar styling
+*
+**************************************************/
+
+/* Fjerne bulletpoints, margin og padding fra unordered-lister */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    color: orange;
+  }
+
+
+  /* Dersom element har klasse som active blir deres tekst oransjh */
+  .active a{
+    color: orange
+  }
+
+
+/**************************************************
+* Content områder
+*
+**************************************************/
+
+.contentLeftSide {
+    grid-area: contentLeft;
+    background-color: white;
+
+}
+.contentMiddleSide {
+    grid-area: contentMiddle;
+    background-color: white;
+
+    /* background-color: #333; */
+}
+.contentRightSide {
+    grid-area: contentRight;
+    background-color: white;
+
+}
+
+/**************************************************
+* Content styling
+*
+**************************************************/
